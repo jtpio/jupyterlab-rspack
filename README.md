@@ -1,5 +1,7 @@
 # JupyterLab Rspack
 
+[![npm](https://img.shields.io/npm/v/jupyterlab-rspack.svg)](https://www.npmjs.com/package/jupyterlab-rspack)
+
 > [!WARNING]
 > This is still a work in progress
 
