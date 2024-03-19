@@ -7,7 +7,8 @@
 
 Build JupyterLab extensions with Rspack (Rust powered Webpack).
 
-https://github.com/jtpio/jupyterlab-rspack-tmp/assets/591645/61f3619f-03b4-4c4b-aaad-9fbe7762d825
+[jupyterlab-rspack-preview-3.webm](https://github.com/jtpio/jupyterlab-rspack/assets/591645/fae85289-7062-4729-9b19-2ea0a0cd40cd)
+
 
 ## Install
 
