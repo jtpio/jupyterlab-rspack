@@ -1,7 +1,7 @@
 // Copyright (c) Jupyter Development Team.
 // Distributed under the terms of the Modified BSD License.
 import rspack from "@rspack/core";
-// import miniSVGDataURI from 'mini-svg-data-uri';
+import miniSVGDataURI from 'mini-svg-data-uri';
 
 const rules = [
   // TODO: put this behind an optional (opt-in or opt-out?) flag
@@ -37,15 +37,18 @@ const rules = [
     type: "asset/resource",
   },
   { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, type: "asset/resource" },
-  // {
-  //   // In .css files, svg is loaded as a data URI.
-  //   test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-  //   issuer: /\.css$/,
-  //   type: 'asset',
-  //   generator: {
-  //     dataUrl: (content: any) => miniSVGDataURI(content.toString())
-  //   }
-  // },
+  {
+    // In .css files, svg is loaded as a data URI.
+    test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+    issuer: /\.css$/,
+    type: 'asset',
+    generator: {
+        dataUrl: {
+          content:(content: any) => miniSVGDataURI(content.content),
+          mimetype: 'image/svg+xml'
+        }
+    }
+  },
   {
     // In .ts and .tsx files (both of which compile to .js), svg files
     // must be loaded as a raw string instead of data URIs.
