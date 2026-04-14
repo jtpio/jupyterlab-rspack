@@ -2,8 +2,11 @@
 
 [![npm](https://img.shields.io/npm/v/jupyterlab-rspack.svg)](https://www.npmjs.com/package/jupyterlab-rspack)
 
+
 > [!WARNING]
-> This is still a work in progress
+> ARCHIVED
+> 
+> Work is now happening https://github.com/jupyterlab/jupyter-builder
 
 Build JupyterLab extensions with Rspack (Rust powered Webpack).
 
